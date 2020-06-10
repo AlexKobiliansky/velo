@@ -1,0 +1,88 @@
+.s-catalog
+  padding-top: 85px
+  padding-bottom: 55px
+  .section-title
+    margin-bottom: 55px
+
+.catalog-controls
+  display: flex
+  justify-content: space-between
+  margin-bottom: 22px
+  li
+    width: calc(20% - 2px)
+    line-height: 1
+    text-align: center
+    box-shadow: 0 0 5px 5px rgba(#000, .03)
+    a
+      display: block
+      padding: 20px
+      color: $text
+    &.ui-tabs-active
+      a
+        background-color: $accent-blue
+        color: #fff
+
+.catalog-tab
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.cat-item
+  width: calc(33.33333% - 20px)
+  margin-bottom: 30px
+  border-radius: 3px
+  box-shadow: 0 0 5px 5px rgba(#000, .03)
+  background-color: #fff
+  position: relative
+  padding: 50px 32px 25px
+  border: 1px solid #e8e8e8
+  &-img
+    height: 170px
+    overflow: hidden
+    margin-bottom: 22px
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+  &-title
+    margin-bottom: 3px
+  &-desc
+    font-weight: 300
+    color: #828282
+    font-size: 14px
+    margin-bottom: 22px
+  &-price
+    display: flex
+    align-items: center
+    margin-bottom: 22px
+    .old
+      color: #d1d1d1
+      text-decoration: line-through
+      margin-right: 15px
+      white-space: nowrap
+    .new
+      font-size: 24px
+      font-weight: 700
+      white-space: nowrap
+  &-buttons
+    font-size: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .btn
+      padding: 14px 18px
+      font-size: 12px
+    .btn-transparent
+      margin-right: 10px
+  &-sale
+    position: absolute
+    line-height: 1
+    padding: 11px 17px
+    font-size: 16px
+    font-weight: 700
+    background-color: $accent-orange
+    border-top-right-radius: 3px
+    border-bottom-right-radius: 3px
+    left: 0
+    top: 15px
+

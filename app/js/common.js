@@ -90,6 +90,8 @@ $(document).ready(function(){
 
     heightses();
 
+    $('.catalog-tabs-wrap').tabs();
+
     $('.adv-item-btn').click(function(){
         var th = $(this);
         var parent = th.parents('.adv-item');

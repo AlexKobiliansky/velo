@@ -27,6 +27,14 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .cat-item
+    &-buttons
+      flex-direction: column
+      align-items: center
+      .btn-transparent
+        margin-right: 0
+        margin-bottom: 15px
+
   .adv-item
     &:nth-child(1)
       left: 410px
@@ -78,6 +86,23 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-catalog
+    padding-top: 40px
+    .section-title
+      margin-bottom: 30px
+
+  .section-title
+    font-size: 28px
+
+  .catalog-controls
+    font-size: 14px
+    li
+      a
+        padding: 16px 10px
+
+  .cat-item
+    width: calc(50% - 15px)
 
   .s-advantages
     padding-top: 350px
@@ -149,6 +174,36 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .catalog-controls
+    flex-wrap: wrap
+    li
+      width: calc(33.3333% - 2px)
+      &:nth-child(1), &:nth-child(2)
+        width: calc(50% - 1px)
+        margin-bottom: 2px
+
+  .cat-item
+    width: calc(50% - 10px)
+    margin-bottom: 20px
+    padding: 30px 15px 15px 25px
+    &-sale
+      font-size: 14px
+      padding: 9px 12px
+      top: 10px
+    &-img
+      height: 140px
+      margin-bottom: 10px
+    &-title
+      font-size: 16px
+    &-desc
+      margin-bottom: 10px
+    &-price
+      .old
+        font-size: 16px
+      .new
+        font-size: 20px
+
+
   .why-left
     flex-wrap: wrap
 
@@ -193,6 +248,36 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .section-title
+    font-size: 24px
+
+  .cat-item
+    width: 100%
+    padding: 50px 32px 25px
+    &-sale
+      padding: 11px 17px
+      font-size: 16px
+      top: 15px
+    &-img
+      margin-bottom: 22px
+    &-title
+      font-size: 18px
+    &-price
+      .old
+        font-size: 18px
+      .new
+        font-size: 24px
+    &-buttons
+      flex-direction: row
+      .btn-transparent
+        margin-bottom: 0
+        margin-right: 10px
+      .btn
+        padding-left: 22px
+        padding-right: 20px
+
+
 
   .s-advantages
     padding-top: 250px
@@ -281,6 +366,24 @@
       font-size: 20px
     .recall
       font-size: 16px
+
+@media (max-width: 420px)
+  .cat-item
+    &-buttons
+      flex-direction: column
+      .btn-transparent
+        margin-right: 0
+        margin-bottom: 15px
+
+  .catalog-controls
+    li
+      width: calc(50% - 1px)
+      margin-bottom: 2px
+      &:nth-child(2)
+        width: calc(50% - 1px)
+      &:nth-child(1)
+        width: 100%
+
 
 @media (max-width: 390px)
 

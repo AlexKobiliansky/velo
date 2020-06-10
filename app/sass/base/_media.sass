@@ -11,6 +11,9 @@
 
 @media (max-width: 1400px)
 
+  .why-decor-2
+    right: 10%
+
   .s-intro
     height: 800px
 
@@ -23,6 +26,15 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .why-decor-3
+    right: 0
+
+  .why-item:nth-child(even)
+    margin-left: 80px
+
+  .char-item
+    width: calc(33.3333% - 15px)
 
   .intro-content
     max-width: 550px
@@ -55,6 +67,41 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .why-wrap
+    flex-wrap: wrap
+
+  .why-right
+    width: 100%
+    order: 1
+    margin-bottom: 50px
+
+  .why-left
+    width: 100%
+    order: 2
+    display: flex
+    //align-items: flex-start
+    justify-content: space-between
+
+  .why-decor
+    &-1
+      width: 560px
+      display: none
+    &-2
+      display: none
+    &-3
+      top: -160px
+      width: 400px
+    &-4
+      display: none
+
+  .why-item
+    width: calc(33.3333% - 10px)
+    padding: 15px
+    &:nth-child(even)
+      margin-left: 0
+    &:last-child
+      margin-bottom: 20px
+
   .intro-content
     max-width: 440px
     h1
@@ -74,6 +121,12 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .why-left
+    flex-wrap: wrap
+
+  .why-item
+    width: 100%
 
   .intro-img
     display: none
@@ -114,6 +167,13 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .char-item
+    width: calc(33.3333% - 7px)
+    text-align: center
+    &-title
+      font-size: 14px
+      span
+        font-size: 24px
 
   .intro-content
     h1
@@ -145,6 +205,26 @@
       font-size: 16px
 
 @media (max-width: 390px)
+
+  .chars-wrap
+    flex-wrap: wrap
+
+  .char-item
+    width: 100%
+    margin-bottom: 20px
+    &-title
+      font-size: 14px
+      span
+        font-size: 32px
+
+  .why-right
+    margin-bottom: 20px
+
+  .why-title
+    font-size: 22px
+
+  .why-desc
+    font-size: 16px
 
   .intro-content
     h1

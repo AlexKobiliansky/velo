@@ -76,6 +76,18 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+    function heightses() {
+        if ($(window).width()>=768) {
+            // $('.why-item').height('auto').equalHeights();
+        }
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);

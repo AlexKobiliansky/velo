@@ -27,6 +27,18 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .adv-item
+    &:nth-child(1)
+      left: 410px
+    &:nth-child(2)
+      left: 66px
+    &:nth-child(3)
+      left: 138px
+    &:nth-child(4)
+      left: 293px
+    &:nth-child(5)
+      left: 403px
+
   .why-decor-3
     right: 0
 
@@ -66,6 +78,21 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-advantages
+    padding-top: 350px
+
+  .adv-item
+    &:nth-child(1)
+      left: 295px
+    &:nth-child(2)
+      left: 0
+    &:nth-child(3)
+      left: 33px
+    &:nth-child(4)
+      left: 180px
+    &:nth-child(5)
+      left: 290px
 
   .why-wrap
     flex-wrap: wrap
@@ -167,6 +194,57 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-advantages
+    padding-top: 250px
+
+  .adv-item
+    width: 200px
+    &-btn
+      width: 40px
+      height: 40px
+      &:before
+        width: 20px
+        height: 3px
+        top: calc(50% - 1.5px)
+        left: calc(50% - 10px)
+      &:after
+        width: 3px
+        height: 20px
+        left: calc(50% - 1.5px)
+        top: calc(50% - 10px)
+    &-content
+      top: 28px
+      padding: 20px 15px 15px
+
+
+    &:nth-child(1)
+      left: auto
+      right: 0
+      top: 35px
+    &:nth-child(2)
+      left: 0
+      top: 120px
+    &:nth-child(3)
+      left: auto
+      right: 0
+      top: 205px
+    &:nth-child(4)
+      left: 0
+      top: 290px
+    &:nth-child(5)
+      left: auto
+      right: 0
+      top: 380px
+
+  .advantages-img
+    &:before
+      width: 390px
+      height: 390px
+      left: calc(50% - 195px)
+      top: 0
+
+
+
   .char-item
     width: calc(33.3333% - 7px)
     text-align: center
@@ -205,6 +283,35 @@
       font-size: 16px
 
 @media (max-width: 390px)
+
+  .advantages-img
+    &:before
+      width: 320px
+      height: 320px
+      left: calc(50% - 160px)
+
+  .s-advantages
+    padding-top: 150px
+
+  .adv-item
+    width: 160px
+    &:nth-child(1)
+      top: 15px
+    &:nth-child(2)
+      top: 75px
+    &:nth-child(3)
+      top: 135px
+    &:nth-child(4)
+      top: 195px
+    &:nth-child(5)
+      top: 255px
+    &-title
+      font-size: 14px
+    &-desc
+      font-size: 12px
+    &-content
+      padding-left: 10px
+      padding-right: 10px
 
   .chars-wrap
     flex-wrap: wrap

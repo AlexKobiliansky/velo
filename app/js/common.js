@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+    $('.adv-item:first-child').addClass('active').find('.adv-item-content').show();
+
     /**
      * mobile-mnu customization
      */
@@ -87,6 +89,17 @@ $(document).ready(function(){
     });
 
     heightses();
+
+    $('.adv-item-btn').click(function(){
+        var th = $(this);
+        var parent = th.parents('.adv-item');
+        var content = th.siblings('.adv-item-content');
+
+        parent.toggleClass('active');
+        content.slideToggle();
+
+        parent.siblings('.adv-item').removeClass('active').find('.adv-item-content').slideUp();
+    })
 
     //E-mail Ajax Send
     $("form").submit(function() { //Change

@@ -3,18 +3,162 @@
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1500px)
+  .intro-img
+    width: 650px
+    height: auto
+    right: 2%
+
+@media (max-width: 1400px)
+
+  .s-intro
+    height: 800px
+
+  .intro-content
+    margin-top: 100px
+
+  .intro-img
+    width: 550px
+    bottom: 120px
+
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .intro-content
+    max-width: 550px
+    h1
+      font-size: 32px
+    p
+      font-size: 18px
+      margin-bottom: 30px
+    .btn
+      font-size: 16px
+      padding: 14px 35px
+
+  .intro-img
+    width: 460px
+
+  .s-intro
+    height: 700px
+
+  .main-mnu
+    display: none
+  .hamburger
+    display: block
+
+  .socials
+    margin-left: 100px
+
+  .head-contacts
+    margin-right: 100px
 
 // ≥992px
 +media-breakpoint-down(md)
 
+  .intro-content
+    max-width: 440px
+    h1
+      font-size: 28px
+
+  .s-intro
+    overflow: hidden
+
+  .intro-img
+    right: -11%
+
+  .socials
+    margin-left: 50px
+
+  .head-contacts
+    margin-right: 50px
+
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .intro-img
+    display: none
+
+  .intro-content
+    margin-top: 50px
+
+  .s-intro
+    padding-bottom: 100px
+    height: auto
+
+  .top-line
+    flex-wrap: wrap
+    padding-bottom: 15px
+
+  .socials
+    width: 50%
+    order: 3
+    margin-left: 0
+    margin-bottom: 0
+    padding-left: 15px
+
+  .head-contacts
+    width: 50%
+    order: 4
+    margin-right: 0
+    margin-bottom: 0
+
+  .hamburger
+    width: 50%
+    text-align: right
+    margin-bottom: 0
+
+  .logo
+    img
+      width: 100px
 
 // ≥480px
 +media-breakpoint-down(xs)
 
+
+  .intro-content
+    h1
+      font-size: 24px
+
+  .top-line
+    padding-bottom: 0
+
+  .socials
+    width: 33.333%
+    position: relative
+    top: -3px
+
+  .hamburger
+    width: auto
+
+  .socials
+    order: inherit
+    padding-left: 0
+    text-align: center
+
+  .head-contacts
+    width: 100%
+    position: relative
+    top: -15px
+    .phone
+      font-size: 20px
+    .recall
+      font-size: 16px
+
+@media (max-width: 390px)
+
+  .intro-content
+    h1
+      font-size: 22px
+    p
+      font-size: 14px
+    .btn
+      font-size: 14px
+
+  .head-contacts
+    .phone
+      font-size: 18px
+    .recall
+      font-size: 16px
 
 /*==========  Mobile First  ==========*/
 

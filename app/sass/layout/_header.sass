@@ -1,0 +1,124 @@
+.main-head
+  //background-color: #1a739f
+  color: #fff
+  a
+    color: #fff
+
+.top-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 8px 0 0
+
+.main-mnu
+  font-size: 0
+  margin-bottom: 30px
+  li
+    display: inline-block
+    margin-right: 45px
+    &:last-child
+      margin-right: 0
+  a
+    font-size: 18px
+    font-weight: 300
+    color: #fff
+    &:hover
+      color: $accent-orange
+
+.socials
+  font-size: 0
+  margin-bottom: 30px
+  .svg
+    width: 33px
+    height: 33px
+    fill: #d2d2d2
+    +mt(.3s)
+
+.soc-item
+  display: inline-block
+  margin-right: 8px
+  &:last-child
+    margin-right: 0
+  &:hover
+    .svg
+      fill: $accent-orange
+
+.head-contacts
+  text-align: right
+  margin-bottom: 30px
+  &>a
+    display: block
+  .phone
+    font-size: 22px
+    line-height: 1.6
+    font-weight: 700
+    &:hover
+      color: $accent-orange
+  .recall
+    position: relative
+    display: inline-block
+    &:after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 1px
+      background-color: #c0d2de
+      left: 0
+      bottom: 0
+      +mt(.3s)
+    &:hover
+      &:after
+        opacity: 0
+
+
+.hamburger
+  padding: 0
+  margin-bottom: 30px
+  display: none
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  background-color: #fff!important
+
+
+//mmenu customization start
+.mm-menu_theme-dark
+  background-color: $accent-blue
+  text-transform: uppercase
+
+.mm-logo
+  display: block
+  margin: 10px auto 0
+  padding: 0
+  width: 100px
+  height: 113px
+
+.mm-navbars_top
+  border-color: transparent
+
+.mm-listitem, .mm-listitem .mm-btn_next, .mm-listitem .mm-btn_next:before, .mm-listitem:after, .mm-listview
+  border-color: rgba(#fff, .3)
+
+.mm-listitem
+  a
+    padding-top: 14px
+    padding-bottom: 12px
+
+.mm-navbar
+  border: none
+  height: 123px
+
+.mm-navbars_top
+  padding-bottom: 10px
+  border-color: rgba(255,255,255,.3)
+
+.mm-menu_theme-dark .mm-navbar a, .mm-menu_theme-dark .mm-navbar>*
+  font-size: 20px
+  color: #fff
+  letter-spacing: 2px
+
+.mm-menu_theme-dark .mm-listview a:not(.mm-btn_next)
+  color: #fff
+
+.mm-menu_navbar_top-1 .mm-panels
+  top: 140px
+//mmenu customization end

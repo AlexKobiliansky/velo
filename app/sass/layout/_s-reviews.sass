@@ -1,0 +1,76 @@
+.s-reviews
+  position: relative
+  background-color: #fab384
+  padding-top: 450px
+  padding-bottom: 260px
+  background-image: url('../img/bg-reviews.png')
+  background-position: center bottom
+  background-repeat: no-repeat
+  .section-title
+    margin-bottom: 40px
+
+
+.reviews-wrap
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.review-item
+  width: calc(50% - 15px)
+  margin-bottom: 30px
+  position: relative
+  background-color: #fff
+  border-radius: 7px
+  box-shadow: 0 0 20px 10px rgba(#000, .1)
+  &-wrapper
+    padding: 35px 42px
+    background-color: #fff
+    position: relative
+    z-index: 2
+    border-radius: 7px
+  &-top
+    display: flex
+    align-items: center
+    margin-bottom: 12px
+  &-img
+    width: 68px
+    height: 68px
+    border-radius: 50%
+    +bg-cover
+    margin-right: 24px
+  &-data
+    width: calc(100% - 92px)
+  &-name
+    font-size: 22px
+    font-weight: 700
+    margin-bottom: 6px
+  &-date
+    font-size: 14px
+    line-height: 1
+    color: $accent-blue
+  &-desc
+    font-size: 16px
+    font-weight: 300
+  &:before
+    content: ''
+    position: absolute
+    width: calc(100% - 19px)
+    height: calc(100% - 19px)
+    border: 3px solid #dedede
+    border-radius: 7px
+    top: 30px
+    left: 30px
+    z-index: 1
+
+.review-decor
+  position: absolute
+
+.review-decor-1
+  left: 0
+  top: -217px
+  max-width: 100%
+  height: auto
+
+.review-decor-2
+  top: -120px
+  right: 0

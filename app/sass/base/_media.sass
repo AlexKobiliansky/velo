@@ -11,6 +11,12 @@
 
 @media (max-width: 1400px)
 
+  .s-reviews
+    padding-top: 350px
+
+  .review-decor-2
+    width: 350px
+
   .why-decor-2
     right: 10%
 
@@ -26,6 +32,26 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .s-reviews
+    overflow: hidden
+    padding-top: 450px
+    .container
+      position: relative
+      z-index: 2
+
+  .review-decor-1
+    top: 0
+    background-image: linear-gradient(to top, #fab384 0 ,  #fab384 50%,  #fff 51%,  #fff 100%)
+    max-width: 1400px
+    left: -10%
+
+  .s-catalog
+    padding-bottom: 0
+    margin-bottom: -130px
+
+  .review-decor-2
+    display: none
 
   .cat-item
     &-buttons
@@ -86,6 +112,18 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .review-item
+    &-wrapper
+      padding: 20px 25px
+    &-img
+      width: 50px
+      height: 50px
+      margin-right: 15px
+    &-data
+      width: calc(100% - 65px)
+    &-name
+      font-size: 20px
 
   .s-catalog
     padding-top: 40px
@@ -249,6 +287,13 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-reviews
+    .section-title
+      margin-bottom: 30px
+
+  .review-item
+    width: 100%
+
   .section-title
     font-size: 24px
 
@@ -386,6 +431,15 @@
 
 
 @media (max-width: 390px)
+
+  .s-reviews
+    padding-top: 400px
+
+  .review-item
+    &-name
+      font-size: 18px
+    &-desc
+      font-size: 14px
 
   .advantages-img
     &:before

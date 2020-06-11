@@ -33,6 +33,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  #map
+    top: -20px
+
+  .dev-block
+    margin-top: -20px
+
   .contacts-block
     width: 450px
     padding: 50px
@@ -121,6 +127,16 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-contacts
+    background-size: auto calc(100% - 400px)
+
+  #map
+    height: 400px
+    top: 0
+
+  .dev-block
+    margin-top: 0
 
   .contacts-wrap
     flex-direction: column
@@ -320,6 +336,10 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .popup-form
+    .form-labels-wrap
+      padding: 0
+
   form
     h2
       font-size: 24px
@@ -486,6 +506,10 @@
 
 
 @media (max-width: 390px)
+
+  .popup-form
+    padding-left: 25px
+    padding-right: 25px
 
   .contacts-block
     padding-left: 15px

@@ -103,6 +103,35 @@ $(document).ready(function(){
         parent.siblings('.adv-item').removeClass('active').find('.adv-item-content').slideUp();
     })
 
+    $(function() {
+        $("a[href='#popup-form'], a[href='#product-form'], a[href='#order-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
+    $("a[href='#product-form']").on('click', function(){
+        var th = $(this);
+        var model = th.data('model');
+
+        $('#product-model').val(model);
+        $('#product-model-desc').find('span').text(model);
+    })
+
+    $("a[href='#order-form']").on('click', function(){
+        var th = $(this);
+        var model = th.data('model');
+
+        $('#order-model').val(model);
+        $('#order-model-desc').find('span').text(model);
+    })
 
     /** FORMS START*/
     var uPhone = $('.user-phone');
@@ -122,14 +151,92 @@ $(document).ready(function(){
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        var t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });
+
+
+    /** MAP START */
+    function loadScript(url, callback){
+        var script = document.createElement("script");
+
+        if (script.readyState){  // IE
+            script.onreadystatechange = function(){
+                if (script.readyState == "loaded" ||
+                    script.readyState == "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {  // Другие браузеры
+            script.onload = function(){
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+
+    function initMap() {
+        ymaps.ready(function(){
+            var mapId = $('#map'),
+                attitude = mapId.data("att"),
+                longtitude = mapId.data("long"),
+                zoom = mapId.data("zoom"),
+                marker = mapId.data("marker"),
+                addr = mapId.data("adr"),
+                map = new ymaps.Map("map", {
+                    center: [attitude, longtitude],
+                    controls: ['zoomControl'],
+                    zoom: zoom
+                }),
+                myPlacemark = new ymaps.Placemark(map.getCenter(), {}, {
+                    // Опции.
+                    // Необходимо указать данный тип макета.
+                    iconLayout: 'default#image',
+                    // Своё изображение иконки метки.
+                    iconImageHref: marker,
+                    // Размеры метки.
+                    iconImageSize: [30, 45],
+                });
+
+
+
+            if ($(window).width()<415) {
+                map.geoObjects.add(myPlacemark);
+            } else {
+                // Открываем балун на карте (без привязки к геообъекту).
+                map.balloon.open(map.getCenter(), '<span class="baloon-addr">'+addr+'</span>', {
+                    // Опция: не показываем кнопку закрытия.
+                    closeButton: false
+                });
+            }
+        });
+    }
+
+    if( $('#map').length )         // use this if you are using id to check
+    {
+        setTimeout(function(){
+            loadScript("https://api-maps.yandex.ru/2.1/?apikey=e470b388-a1d0-4edf-acdc-34b4bc5bedee&lang=ru_RU&loadByRequire=1", function(){
+                initMap();
+            });
+        }, 2000);
+    }
+    /** MAP END */
+
 });

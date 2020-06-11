@@ -1,10 +1,17 @@
 .s-contacts
-  padding-top: 160px
+  padding-top: 100px
   background-image: url('../img/bg-contacts.png')
   +bg-cover
   background-position: top center
+  background-size: 100% calc(100% - 510px)
   position: relative
   z-index: 2
+
+#map
+  height: 510px
+  position: relative
+  top: -35px
+  background-color: #ccc
 
 .contacts-wrap
   display: flex
@@ -16,7 +23,9 @@
   width: 555px
   border-radius: 7px
   box-shadow: 0 0 20px 5px rgba(#000, .1)
-  padding: 60px 70px 85px
+  padding: 80px 70px 100px
+  position: relative
+  z-index: 3
 
 .contact-item
   display: flex
@@ -107,3 +116,57 @@ form
 .section-form
   width: 486px
   padding-right: 30px
+  margin-bottom: 35px
+
+.popup-form
+  display: block
+  max-width: 550px
+  margin-left: auto
+  margin-right: auto
+  background-color: $accent-blue
+  border-radius: 10px
+  padding: 30px 40px
+  .form-labels-wrap
+    padding: 0 40px
+
+#product-form
+  .form-desc
+    span
+      white-space: nowrap
+      font-weight: 700
+
+#order-form
+  h2
+    margin-bottom: 30px
+    span
+      white-space: nowrap
+
+
+
+
+.ymaps-2-1-76-balloon__content
+  background: $accent-orange!important
+  padding: 14px 14px 14px 55px!important
+  background-image: url('../img/icons/baloon-icon.png')!important
+  background-repeat: no-repeat!important
+  background-size: 33px 30px!important
+  background-position: 12px 14px!important
+  font-size: 12px!important
+  font-family: "ProximaNova", sans-serif!important
+  border-radius: 7px!important
+
+.ymaps-2-1-76-balloon
+  box-shadow: none!important
+  border-radius: 7px!important
+
+.ymaps-2-1-76-balloon__tail:after
+  background: $accent-orange!important
+  box-shadow: none!important
+
+.ymaps-2-1-76-balloon__tail
+  box-shadow: none!important
+
+.baloon-addr
+  width: 165px!important
+  display: block
+  line-height: 1.3

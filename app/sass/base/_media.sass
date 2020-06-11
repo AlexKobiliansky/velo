@@ -33,6 +33,15 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .contacts-block
+    width: 450px
+    padding: 50px
+
+  .section-form
+    width: 430px
+    padding-left: 0
+
+
   .s-reviews
     overflow: hidden
     padding-top: 450px
@@ -112,6 +121,23 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .contacts-wrap
+    flex-direction: column
+
+  .contact-item
+    margin-bottom: 40px
+    a.sublink
+      display: block
+
+  .section-form
+    width: 100%
+    padding-left: 100px
+    padding-right: 100px
+
+  .contacts-block
+    width: 100%
+    margin-bottom: 30px
 
   .review-item
     &-wrapper
@@ -212,6 +238,13 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-contacts
+    padding-top: 70px
+
+  .section-form
+    padding-left: 0
+    padding-right: 0
+
   .catalog-controls
     flex-wrap: wrap
     li
@@ -286,6 +319,28 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  form
+    h2
+      font-size: 24px
+    .form-desc
+      font-size: 18px
+    input
+      font-size: 18px
+      padding: 12px 20px
+    .btn
+      font-size: 14px
+      padding: 14px
+      margin-top: 10px
+
+  .contacts-block
+    padding: 40px 25px
+
+  .contact-item
+    font-size: 18px
+    &.phone
+      a
+        font-size: 24px
 
   .s-reviews
     .section-title
@@ -431,6 +486,16 @@
 
 
 @media (max-width: 390px)
+
+  .contacts-block
+    padding-left: 15px
+    padding-right: 15px
+
+  .contact-item
+    font-size: 16px
+    &.phone
+      a
+        font-size: 20px
 
   .s-reviews
     padding-top: 400px

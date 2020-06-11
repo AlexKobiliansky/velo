@@ -1,0 +1,109 @@
+.s-contacts
+  padding-top: 160px
+  background-image: url('../img/bg-contacts.png')
+  +bg-cover
+  background-position: top center
+  position: relative
+  z-index: 2
+
+.contacts-wrap
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.contacts-block
+  background-color: #fff
+  width: 555px
+  border-radius: 7px
+  box-shadow: 0 0 20px 5px rgba(#000, .1)
+  padding: 60px 70px 85px
+
+.contact-item
+  display: flex
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 65px
+  font-size: 20px
+  line-height: 1
+  &:last-child
+    margin-bottom: 0
+  .svg
+    fill: $accent-orange
+    width: 22px
+    height: auto
+  &-desc
+    width: calc(100% - 40px)
+    a
+      display: inline-block
+  &.phone
+    align-items: center
+    a
+      font-size: 36px
+      font-weight: 700
+      color: $text
+      margin-bottom: 8px
+      &:hover
+        color: $accent-blue
+  &.email
+    a
+      text-decoration: underline
+      color: $text
+      &:hover
+        text-decoration: none
+  &.address
+    line-height: 1.2
+
+  a.sublink
+    font-size: 16px!important
+    color: $accent-blue
+    text-decoration: underline
+    display: inline-block
+    font-weight: normal
+    margin-bottom: 0
+    &:hover
+      text-decoration: none
+
+
+form
+  color: #fff
+  text-align: center
+  h2
+    font-size: 32px
+    margin-bottom: 5px
+  .form-desc
+    font-size: 24px
+    margin-bottom: 30px
+  label
+    display: block
+    text-align: left
+    margin-bottom: 18px
+  input
+    width: 100%
+    line-height: 1
+    font-size: 20px
+    color: #fff
+    padding: 14px 36px
+    border: 1px solid #aeaeae
+    border-radius: 3px
+    background-color: transparent
+    &::placeholder
+      color: #aeaeae
+    &:focus
+      border-color: $accent-orange
+      &::placeholder
+        color: #fff
+    &.error
+      border-color: red!important
+      color: red!important
+      &::placeholder
+        color: red!important
+  .btn
+    margin-top: 20px
+    padding: 17px 20px
+    width: 200px
+  .help-block
+    display: none
+
+.section-form
+  width: 486px
+  padding-right: 30px

@@ -9,15 +9,20 @@
   justify-content: space-between
   align-items: center
   padding: 8px 0 0
+  //+mt(.3s)
 
 .main-mnu
   font-size: 0
   margin-bottom: 30px
+  //+mt(.3s)
   li
     display: inline-block
     margin-right: 45px
     &:last-child
       margin-right: 0
+    &.active
+      a
+        color: $accent-orange
   a
     font-size: 18px
     font-weight: 300
@@ -28,6 +33,7 @@
 .socials
   font-size: 0
   margin-bottom: 30px
+  //+mt(.3s)
   .svg
     width: 33px
     height: 33px
@@ -46,6 +52,7 @@
 .head-contacts
   text-align: right
   margin-bottom: 30px
+  //+mt(.3s)
   &>a
     display: block
   .phone
@@ -69,6 +76,11 @@
     &:hover
       &:after
         opacity: 0
+
+.logo
+  img
+    width: 138px
+    //+mt(.3s)
 
 
 .hamburger

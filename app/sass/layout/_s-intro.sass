@@ -6,6 +6,27 @@
   background-color: #1a739f
   background-size: cover
   position: relative
+  &.sticky
+    padding-top: 164px
+    .main-head
+      background-color: $accent-blue
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      z-index: 1000
+      box-shadow: 0 0 5px 2px rgba(#000, .2)
+      .logo
+        width: 138px
+        img
+          width: 65px
+      .top-line
+        padding: 5px 0
+      .main-mnu, .socials, .head-contacts, .hamburger
+        margin-bottom: 0
+      .hamburger
+        top: 5px
+        position: relative
 
 .intro-content
   margin-top: 175px

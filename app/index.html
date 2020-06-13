@@ -34,21 +34,41 @@
 </head>
 
 <body>
+<!-- preloader -->
+<div class="preloader">
+	<div class="sk-circle-bounce">
+		<div class="sk-child sk-circle-1"></div>
+		<div class="sk-child sk-circle-2"></div>
+		<div class="sk-child sk-circle-3"></div>
+		<div class="sk-child sk-circle-4"></div>
+		<div class="sk-child sk-circle-5"></div>
+		<div class="sk-child sk-circle-6"></div>
+		<div class="sk-child sk-circle-7"></div>
+		<div class="sk-child sk-circle-8"></div>
+		<div class="sk-child sk-circle-9"></div>
+		<div class="sk-child sk-circle-10"></div>
+		<div class="sk-child sk-circle-11"></div>
+		<div class="sk-child sk-circle-12"></div>
+	</div>
+</div>
+<!-- /preloader -->
+
+
 <div id="page-container">
 	<!-- mobile-mnu -->
 	<nav id="mobile-mnu" data-logo="img/logo.png">
 		<ul>
-			<li><a href="#0">Каталог</a></li>
-			<li><a href="#0">Доставка</a></li>
-			<li><a href="#0">Почему мы?</a></li>
-			<li><a href="#0">Отзывы</a></li>
-			<li><a href="#0">Контакты</a></li>
+			<li><a href="#s-catalog">Каталог</a></li>
+			<li><a href="#s-why">Доставка</a></li>
+			<li><a href="#s-advantages">Почему мы?</a></li>
+			<li><a href="#s-reviews">Отзывы</a></li>
+			<li><a href="#s-contacts">Контакты</a></li>
 		</ul>
 	</nav>
 	<!-- /mobile-mnu -->
 
 	<!-- ======= SECTION S-INTRO START ======= -->
-	<section class="s-intro">
+	<section class="s-intro" id="s-intro" data-id="s-intro">
 		<div class="intro-img">
 			<img src="img/intro-img.png" alt="alt" class="img-responsive">
 		</div>
@@ -61,21 +81,21 @@
 					</a>
 					<nav class="main-mnu">
 						<ul>
-							<li><a href="#0">Каталог</a></li>
-							<li><a href="#0">Доставка</a></li>
-							<li><a href="#0">Почему мы?</a></li>
-							<li><a href="#0">Отзывы</a></li>
-							<li><a href="#0">Контакты</a></li>
+							<li><a href="#s-catalog">Каталог</a></li>
+							<li><a href="#s-why">Доставка</a></li>
+							<li><a href="#s-advantages">Почему мы?</a></li>
+							<li><a href="#s-reviews">Отзывы</a></li>
+							<li><a href="#s-contacts">Контакты</a></li>
 						</ul>
 					</nav>
 					<div class="socials">
 						<!-- soc-item -->
-						<a href="#0" class="soc-item">
+						<a href="#0" class="soc-item" target="_blank">
 							<img src="img/icons/soc-icon-1.svg" alt="alt" class="svg">
 						</a>
 						<!-- soc-item -->
 						<!-- soc-item -->
-						<a href="#0" class="soc-item">
+						<a href="#0" class="soc-item" target="_blank">
 							<img src="img/icons/soc-icon-2.svg" alt="alt" class="svg">
 						</a>
 						<!-- soc-item -->
@@ -100,7 +120,7 @@
 			<div class="intro-content">
 				<h1>В наличии более 1000 достойных моделей велосипедов</h1>
 				<p>Со всеми моделями можете ознакомиться в каталоге.</p>
-				<a href="#0" class="btn btn-orange">Перейти в каталог</a>
+				<a href="#s-catalog" class="btn btn-orange btn-scroll">Перейти в каталог</a>
 			</div>
 		</div>
 
@@ -108,7 +128,7 @@
 	<!-- ======= SECTION S-INTRO END ======= -->
 
 	<!-- ======= SECTION S-WHY START ======= -->
-	<section class="s-why">
+	<section class="s-why" id="s-why" data-id="s-why">
 		<img src="img/why-img-1.png" alt="alt" class="why-decor why-decor-1 img-responsive">
 		<img src="img/why-img-2.png" alt="alt" class="why-decor why-decor-2 img-responsive">
 		<img src="img/why-img-3.png" alt="alt" class="why-decor why-decor-3 img-responsive">
@@ -178,9 +198,9 @@
 	<!-- ======= SECTION S-WHY END ======= -->
 
 	<!-- ======= SECTION S-ADVANTAGES START ======= -->
-	<section class="s-advantages">
+	<section class="s-advantages" data-id="s-advantages">
 		<div class="container">
-			<div class="advantages-wrap">
+			<div class="advantages-wrap" id="s-advantages">
 				<!-- adv-item -->
 				<div class="adv-item">
 					<div class="adv-item-btn"></div>
@@ -240,7 +260,7 @@
 	<!-- ======= SECTION S-ADVANTAGES END ======= -->
 
 	<!-- ======= SECTION S-CATALOG START ======= -->
-	<section class="s-catalog">
+	<section class="s-catalog" id="s-catalog" data-id="s-catalog">
 		<div class="container">
 			<h2 class="section-title">Каталог продукции</h2>
 			<div class="catalog-tabs-wrap">
@@ -254,6 +274,196 @@
 
 				<div class="catalog-tabs">
 					<div class="catalog-tab" id="catalog-tab-1">
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
 						<!-- cat-item -->
 						<div class="cat-item">
 							<div class="cat-item-sale">20%</div>
@@ -346,6 +556,26 @@
 							</div>
 						</div>
 						<!-- /cat-item -->
+					</div>
+					<div class="catalog-tab" id="catalog-tab-2">
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
 
 						<!-- cat-item -->
 						<div class="cat-item">
@@ -360,28 +590,182 @@
 								<div class="new">12 500 &#8381;</div>
 							</div>
 							<div class="cat-item-buttons">
-								<a href="#0" class="btn btn-transparent">Подробнее</a>
-								<a href="#0" class="btn btn-orange">Заказать со скидкой</a>
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
 							</div>
 						</div>
 						<!-- /cat-item -->
 					</div>
-					<div class="catalog-tab" id="catalog-tab-2">2</div>
-					<div class="catalog-tab" id="catalog-tab-3">3</div>
+					<div class="catalog-tab" id="catalog-tab-3">
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+
+						<!-- cat-item -->
+						<div class="cat-item">
+							<div class="cat-item-sale">20%</div>
+							<div class="cat-item-img">
+								<img src="img/cat-img-1.png" alt="alt">
+							</div>
+							<div class="cat-item-title">Keyou JAP-2 20 D</div>
+							<div class="cat-item-desc">Велосипед на литых дисках подростковый</div>
+							<div class="cat-item-price">
+								<div class="old">13 500 &#8381;</div>
+								<div class="new">12 500 &#8381;</div>
+							</div>
+							<div class="cat-item-buttons">
+								<a href="#product-form" class="btn btn-transparent" data-model="23123">Подробнее</a>
+								<a href="#order-form" class="btn btn-orange" data-model="23232">Заказать со скидкой</a>
+							</div>
+						</div>
+						<!-- /cat-item -->
+					</div>
 					<div class="catalog-tab" id="catalog-tab-4">4</div>
 					<div class="catalog-tab" id="catalog-tab-5">5</div>
 				</div>
 			</div>
 		</div>
+		<img src="img/reviews-decor-1.png" alt="alt" class="catalog-decor catalog-decor-1">
+		<img src="img/reviews-decor-2.png" alt="alt" class="catalog-decor catalog-decor-2">
 	</section>
 	<!-- ======= SECTION S-CATALOG END ======= -->
 
+
+
 	<!-- ======= SECTION S-REVIEWS START ======= -->
-	<section class="s-reviews">
-		<img src="img/reviews-decor-1.png" alt="alt" class="review-decor review-decor-1">
-		<img src="img/reviews-decor-2.png" alt="alt" class="review-decor review-decor-2">
+	<section class="s-reviews" data-id="s-reviews">
+
 		<div class="container">
-			<h2 class="section-title">Отзывы наших клиентов</h2>
+			<h2 class="section-title" id="s-reviews">Отзывы наших клиентов</h2>
 			<div class="reviews-wrap">
 				<!-- review-item -->
 				<div class="review-item">
@@ -422,7 +806,7 @@
 	<!-- ======= SECTION S-REVIEWS END ======= -->
 
 	<!-- ======= SECTION S-CONTACTS START ======= -->
-	<section class="s-contacts">
+	<section class="s-contacts" id="s-contacts" data-id="s-contacts">
 		<div class="container">
 			<div class="contacts-wrap">
 				<div class="contacts-block">
@@ -557,7 +941,7 @@
 		<input type="hidden" name="Модель" value="" id="order-model">
 
 
-		<h2 class="order-model-desc">Заказ товара: <span>Keyou JAP-2 20 D</span></h2>
+		<h2 id="order-model-desc">Заказ товара: <span>Keyou JAP-2 20 D</span></h2>
 
 		<div class="form-labels-wrap">
 			<label>

@@ -6,6 +6,10 @@
   .section-title
     margin-bottom: 55px
 
+.catalog-tabs
+  position: relative
+  z-index: 5
+
 .catalog-controls
   display: flex
   justify-content: space-between
@@ -29,6 +33,7 @@
   display: flex
   justify-content: space-between
   flex-wrap: wrap
+  min-height: 300px
 
 .cat-item
   width: calc(33.33333% - 20px)
@@ -88,4 +93,26 @@
     border-bottom-right-radius: 3px
     left: 0
     top: 15px
+
+
+.item
+  background-color: transparent!important
+  //border: 1px solid #bcbbb5
+  box-shadow: inset 5px 1px 8px 1px rgba(#000, .2)
+
+.move
+  z-index: -1
+
+.catalog-decor
+  position: absolute
+
+.catalog-decor-1
+  left: 0
+  bottom: -350px
+  max-width: 100%
+  height: auto
+
+.catalog-decor-2
+  bottom: -470px
+  right: 0
 

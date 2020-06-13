@@ -1,5 +1,38 @@
 $(document).ready(function(){
 
+
+    $('img.svg').each(function(){
+        var $img = jQuery(this);
+        var imgID = $img.attr('id');
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+
+        jQuery.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = jQuery(data).find('svg');
+
+            // Add replaced image's ID to the new SVG
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+            // Add replaced image's classes to the new SVG
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
+
+            // Remove any invalid XML tags as per http://validator.w3.org
+            $svg = $svg.removeAttr('xmlns:a');
+
+            // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+            if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+            }
+
+            // Replace image with new SVG
+            $img.replaceWith($svg);
+        }, 'xml');
+    });
+
     $('.adv-item:first-child').addClass('active').find('.adv-item-content').show();
 
     /**
@@ -46,37 +79,7 @@ $(document).ready(function(){
      * end mobile-mnu customization
      */
 
-    $('img.svg').each(function(){
-        var $img = jQuery(this);
-        var imgID = $img.attr('id');
-        var imgClass = $img.attr('class');
-        var imgURL = $img.attr('src');
 
-        jQuery.get(imgURL, function(data) {
-            // Get the SVG tag, ignore the rest
-            var $svg = jQuery(data).find('svg');
-
-            // Add replaced image's ID to the new SVG
-            if(typeof imgID !== 'undefined') {
-                $svg = $svg.attr('id', imgID);
-            }
-            // Add replaced image's classes to the new SVG
-            if(typeof imgClass !== 'undefined') {
-                $svg = $svg.attr('class', imgClass+' replaced-svg');
-            }
-
-            // Remove any invalid XML tags as per http://validator.w3.org
-            $svg = $svg.removeAttr('xmlns:a');
-
-            // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-            if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-            }
-
-            // Replace image with new SVG
-            $img.replaceWith($svg);
-        }, 'xml');
-    });
 
     function heightses() {
         if ($(window).width()>=768) {
@@ -90,7 +93,11 @@ $(document).ready(function(){
 
     heightses();
 
-    $('.catalog-tabs-wrap').tabs();
+    $('.catalog-tabs-wrap').tabs({
+        activate: function( event, ui ) {
+            bubbles();
+        }
+    });
 
     $('.adv-item-btn').click(function(){
         var th = $(this);
@@ -156,7 +163,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
             setTimeout(function() {
@@ -238,5 +245,67 @@ $(document).ready(function(){
         }, 2000);
     }
     /** MAP END */
+
+
+    $(".main-mnu a, .btn-scroll").mPageScroll2id({
+        offset: 100
+    });
+
+    if($(window).width() >= 768) {
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 30) {
+                $('.s-intro').addClass('sticky')
+            } else {
+                $('.s-intro').removeClass('sticky')
+            }
+        });
+    }
+
+
+    $(".main-mnu a, .btn-scroll").mPageScroll2id({
+        offset: 60
+    });
+
+
+    $(document).on('scroll', function() {
+        var posDoc = $(this).scrollTop();
+
+        $('section').each(function(){
+            var id = $(this).data("id");
+            var topHeader = $(this).offset().top - 100;
+            var botHeader = topHeader + $(this).height() - 100;
+
+            if (
+                posDoc > topHeader &&
+                posDoc < botHeader &&
+                id
+            ) {
+                $('.main-mnu li').removeClass("active");
+                $( '.main-mnu li a[href="#' + id + '"]' ).parents("li").addClass("active");
+            }
+        });
+    });
+
+
+    var bubbles = function() {
+        $('.move').remove();
+        var items=500;
+        for (var i=0 ;i <= items; i++ ) {
+            var moveVal = Math.ceil(Math.random() * 50);
+            var posVal = Math.ceil(Math.random() * 50);
+            var scaleVal = Math.ceil(Math.random() * 10);
+            var shakeVal = Math.ceil(Math.random() * 5);
+            var stretch = Math.ceil(Math.random() * 5);
+            $(".s-catalog").append('<div class="move move' + moveVal + ' pos' + posVal + '"><div class="scale' + scaleVal + '"><div class="item shake' + shakeVal + '"><span class="item stretch' + stretch + '"></span></div></div>');
+        }
+    }
+
+    bubbles();
+
+    setTimeout(function(){
+        $('.preloader').fadeOut();
+    }, 300)
+
+
 
 });

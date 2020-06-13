@@ -3,19 +3,36 @@
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1600px)
+  .catalog-decor-1
+    bottom: -300px
+
+  .catalog-decor-2
+    width: 380px
+    bottom: -420px
+
+  .s-reviews
+    padding-top: 350px
+
+
+
 @media (max-width: 1500px)
   .intro-img
     width: 650px
     height: auto
     right: 2%
 
+
+
+
 @media (max-width: 1400px)
 
-  .s-reviews
-    padding-top: 350px
+  .catalog-decor-1
+    bottom: -250px
 
-  .review-decor-2
-    width: 350px
+  .catalog-decor-2
+    width: 320px
+    bottom: -350px
 
   .why-decor-2
     right: 10%
@@ -32,6 +49,14 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .move
+    display: none !important
+
+  .s-intro
+    &.sticky
+      .socials
+        margin-left: 0
 
   #map
     top: -20px
@@ -50,22 +75,24 @@
 
   .s-reviews
     overflow: hidden
-    padding-top: 450px
+    padding-top: 30px
     .container
       position: relative
       z-index: 2
 
-  .review-decor-1
-    top: 0
+
+
+  .catalog-decor-1
     background-image: linear-gradient(to top, #fab384 0 ,  #fab384 50%,  #fff 51%,  #fff 100%)
     max-width: 1400px
     left: -10%
+    bottom: 0
 
   .s-catalog
-    padding-bottom: 0
-    margin-bottom: -130px
+    padding-bottom: 320px
+    overflow: hidden
 
-  .review-decor-2
+  .catalog-decor-2
     display: none
 
   .cat-item
@@ -127,6 +154,8 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+
 
   .s-contacts
     background-size: auto calc(100% - 400px)
@@ -336,6 +365,9 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .s-intro
+    padding-bottom: 225px
+
   .popup-form
     .form-labels-wrap
       padding: 0
@@ -363,8 +395,12 @@
         font-size: 24px
 
   .s-reviews
+    padding-top: 0
     .section-title
       margin-bottom: 30px
+
+  .s-catalog
+    padding-bottom: 250px
 
   .review-item
     width: 100%
@@ -520,9 +556,6 @@
     &.phone
       a
         font-size: 20px
-
-  .s-reviews
-    padding-top: 400px
 
   .review-item
     &-name
